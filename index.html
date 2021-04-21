@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!--
+            フォント関連
+        -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link rel="stylesheet" href="https://lid.co.jp/wp-content/themes/lid/js/swiper.min.css">
+
+        <title>lid Inc.</title>
+
+        <link rel='stylesheet' id='wp-block-library-css'  href='https://c0.wp.com/c/5.7.1/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+        <style id='wp-block-library-inline-css' type='text/css'>
+            .has-text-align-justify{text-align:justify;}
+        </style>
+
+        <link rel='stylesheet' id='contact-form-7-css'                       href='https://lid.co.jp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4'                        type='text/css' media='all' />
+        <link rel='stylesheet' id='monsterinsights-popular-posts-style-css'  href='https://lid.co.jp/wp-content/plugins/google-analytics-for-wordpress/assets/css/frontend.min.css?ver=7.16.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='scrollbar-css'                            href='https://lid.co.jp/wp-content/themes/lid/js/jquery.mCustomScrollbar.min.css?ver=5.7.1'                       type='text/css' media='all' />
+        <link rel='stylesheet' id='base-css'                                 href='https://lid.co.jp/wp-content/themes/lid/base.css?ver=5.7.1'                                                 type='text/css' media='all' />
+        <link rel='stylesheet' id='style-css'                                href='https://lid.co.jp/wp-content/themes/lid/style.css?ver=5.7.1'                                                type='text/css' media='all' />
+
+        <!-- アクセス解析用のツール いらない
+        <link rel='stylesheet' id='jetpack_css-css'                          href='https://c0.wp.com/p/jetpack/9.5/css/jetpack.css'                                                            type='text/css' media='all' />
+        -->
+
+        <script type='text/javascript' id='jquery-js'  src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=1.12.4'></script>
+        <script type='text/javascript' id='circle-js'  src='https://lid.co.jp/wp-content/themes/lid/js/circle-anime.js?ver=1.12.4'></script>
+        <script type='text/javascript' id='jscript-js' src='https://lid.co.jp/wp-content/themes/lid/jscript.js?ver=1.12.4'></script>
+        <script type='text/javascript' id='minmax-js'  src='https://lid.co.jp/wp-content/themes/lid/js/minmax.js?ver=1.12.4'></script>
+
+        <link rel="https://api.w.org/" href="https://lid.co.jp/wp-json/" /><link rel="alternate" type="application/json" href="https://lid.co.jp/wp-json/wp/v2/pages/8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lid.co.jp/xmlrpc.php?rsd" />
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://lid.co.jp/wp-includes/wlwmanifest.xml" />
+
+
+        <link rel='shortlink' href='https://lid.co.jp/' />
+        <link rel="alternate" type="application/json+oembed" href="https://lid.co.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flid.co.jp%2F" />
+        <link rel="alternate" type="text/xml+oembed"         href="https://lid.co.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flid.co.jp%2F&#038;format=xml" />
+
+        <style type='text/css'>img#wpstats{display:none}</style><link rel="icon" href="https://lid.co.jp/wp-content/uploads/2021/03/cropped-favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="https://lid.co.jp/wp-content/uploads/2021/03/cropped-favicon-192x192.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="https://lid.co.jp/wp-content/uploads/2021/03/cropped-favicon-180x180.png" />
+        <meta name="msapplication-TileImage" content="https://lid.co.jp/wp-content/uploads/2021/03/cropped-favicon-270x270.png" />
+    </head>
+
+
+
+    <!--
+        itemscope属性は、この要素が、構造化データをマークアップしている要素だということを、
+        ユーザーエージェントに伝えるための属性
+        要は、Google様のSEO対策
+    -->
+    <body itemscope itemtype="http://schema.org/WebPage" class="home page-template-default page page-id-8">
+
+
+        <!--
+            いっちばん最初のローディングアニメーション用
+        -->
+        <!-- ローディング画面 -->
+        <div id="loading" class="flex-c-c flex-d">
+            <div class="preloader">
+                <div class="preloader__square"></div>
+                <div class="preloader__square"></div>
+                <div class="preloader__square"></div>
+                <div class="preloader__square"></div>
+            </div>
+            <div class="status">
+                Loading
+                <span class="status__dot">.</span>
+                <span class="status__dot">.</span>
+                <span class="status__dot">.</span>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!--
+            カーソル位置を黒丸にして、
+            黒丸よりちょっと大きい丸が追従するようにする
+        -->
+        <!-- カーソル設定 -->
+        <div class="cursor"></div>
+        <div class="follower"></div>
+
+        <!--
+            JSでキャンバス要素を挿入する
+            キャンバス上で、球を配置して、
+            お互いの距離が一定以内なら線でつなぐ
+        -->
+        <!-- 背景 -->
+        <div id="particles-js"></div>
+        <script src="https://lid.co.jp/wp-content/themes/lid/js/particles.min.js"></script>
+        <script src="https://lid.co.jp/wp-content/themes/lid/js/setting.js"></script>
+
+        <div class="header-logo">
+            <a href="/">
+                <img src="https://lid.co.jp/wp-content/themes/lid/image/common/logo.svg" alt="株式会社エルアイディ">
+            </a>
+        </div>
+
+        <!-- 右上メニューボタン -->
+        <div class="menu">
+            <div class="menu-wp flex-c">
+                <div class="menu-text">
+                    <p>MENU</p>
+                </div>
+                <div class="menu-bt">
+                    <!-- それぞれのspanタグが
+                        MENUの文字の横にある 線に対応
+                        アニメーションはCSS?
+                    -->
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- モーダルナビ -->
+        <div class="body-cover"></div>
+        <div class="cover-menu">
+            <p data-id="0">TOP</p>
+            <p data-id="1">ABOUT</p>
+            <p data-id="2">SERVICE</p>
+            <p data-id="3">OUTLINE</p>
+            <p data-id="4">CONTACT</p>
+        </div>
+
+
+
+
+
+
+
+        <!--
+            こっからは個別のコンテンツ
+            スライドするごとにトランジションして
+            それぞれのコンテンツを表示する
+        -->
+        <div class="swiper-container main">
+            <div class="swiper-wrapper">
+
+                <!-- TOP -->
+                <div id="top" class="swiper-slide" data-hash="slide1">
+                    <canvas id="canvas">Canvas not supported.</canvas>
+                    <div class="logo">
+                        <img src="https://lid.co.jp/wp-content/themes/lid/image/top/logo2.svg" alt="株式会社エルアイディ">
+                    </div>
+                </div>
+
+                <!-- ABOUT -->
+                <div id="about" class="swiper-slide container flex-c-c" data-hash="slide2">
+                    <div class="wrapper scroll-area">
+                        <div class="tx-inner">
+                            <p>株式会社 エルアイディはモノづくり、リテール、Webサービスの仕事を通じて、<br>人から人へ伝わる新しい驚きや感動、人から人へ繋がる想いを大切に、<br>クライアントやユーザーにとって価値の高いプロジェクトを提案して行きます。<br></p>
+                            <p>ブランディングや広告の企画・提案・制作、企業や個人向けのWEBサイトなど 売上や集客に繋がるアイディアを武器に様々な情報をより良い形へと変化させ細部にこだわったサービス。</p>
+                            <p>思わず“素敵だな“と目を止めてしまう商品、生活を便利にするアイテムや、思わず欲しくなるアイテム。定番からトレンドまで商品企画・マーケティングを用いた商品販売、高い顧客満足でお客様に選ばれるサービス作りを目指しています。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SERVICE -->
+                <div id="service" class="swiper-slide container flex-c-c" data-hash="slide3">
+                    <div class="wrapper scroll-area">
+                        <div class="service-wrap">
+                            <ul class="service-list cf">
+                                <li><a href="https://nine-feel.com/" target="_blank">
+                                        <figure><img src="https://lid.co.jp/wp-content/themes/lid/image/top/ninefeel.png" alt="クリエイティブラボ「nine feel」"></figure>
+                                        <figcaption>クリエイティブラボ<br class="sp-show">「nine feel」</figcaption>
+                                    </a>
+                                </li>
+                                <li class="shop-bnr">
+                                    <a>
+                                        <figure><img src="https://lid.co.jp/wp-content/themes/lid/image/top/landb.png" alt="インテリア・雑貨販売「Lily&Birch」"></figure>
+                                        <figcaption>インテリア・雑貨販売<br class="sp-show">「Lily&Birch」</figcaption>
+                                    </a>
+                                </li>
+                                <li><a href="https://sts-t.com/" target="_blank">
+                                        <figure><img src="https://lid.co.jp/wp-content/themes/lid/image/top/sts.png" alt="労働安全サポート「STS」"></figure>
+                                        <figcaption>労働安全サポート<br class="sp-show">「STS」</figcaption>
+                                    </a>
+                                </li>
+                                <li>
+                                    <figure><img src="https://lid.co.jp/wp-content/themes/lid/image/top/comingsoon.png" alt="Coming Soon"></figure>
+                                    <figcaption>Coming Soon</figcaption>
+                                </li>
+                            </ul>
+                            <div class="modal">
+                                <div class="modal-btn">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <ul class="modal-list cf">
+                                    <li><a href="https://www.rakuten.ne.jp/gold/lily-birch/" target="_blank">
+                                            <figure><img src="https://lid.co.jp/wp-content/themes/lid/image/top/rakuten.svg" alt="楽天市場店"></figure>
+                                            <figcaption>楽天市場店</figcaption>
+                                        </a>
+                                    </li>
+                                    <li><a href="https://shopping.geocities.jp/lily-birch/" target="_blank">
+                                            <figure><img src="https://lid.co.jp/wp-content/themes/lid/image/top/yahoo.svg" alt="Yahoo!店"></figure>
+                                            <figcaption>Yahoo!店</figcaption>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OUTLINE -->
+                <div id="outline" class="swiper-slide container flex-c-c" data-hash="slide4">
+                    <div class="wrapper scroll-area">
+                        <div class="out-table table">
+                            <ol>
+                                <li>
+                                    <dd>社　名</dd>
+                                    <dd>株式会社 エルアイディ</dd>
+                                </li>
+                                <li>
+                                    <dd>所在地</dd>
+                                    <dd>〒500-8323 岐阜県岐阜市鹿島町8丁目 44-2 envoi terrasse 1F</dd>
+                                </li>
+                                <li>
+                                    <dd>設　立</dd>
+                                    <dd>2017年12月</dd>
+                                </li>
+                                <li>
+                                    <dd>資本金</dd>
+                                    <dd>3,000,000円</dd>
+                                </li>
+                                <li>
+                                    <dd>役　員</dd>
+                                    <dd>代表取締役　谷口大輔</dd>
+                                </li>
+                                <li>
+                                    <dd>TEL</dd>
+                                    <dd>058-255-5388</dd>
+                                </li>
+                                <li>
+                                    <dd>FAX</dd>
+                                    <dd>058-255-5399</dd>
+                                </li>
+                                <li>
+                                    <dd>事業内容</dd>
+                                    <dd>各種デザイン制作・映像制作・イベント企画、運営<br>ECサイト運営・ネット販売事業・webコンサルティング事業</dd>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT -->
+                <div id="contact" class="swiper-slide container flex-c-c" data-hash="slide5">
+                    <div class="wrapper scroll-area">
+                        <div class="form col">
+                            <div role="form" class="wpcf7" id="wpcf7-f13-o1" lang="ja" dir="ltr">
+                                <div class="screen-reader-response">
+                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                    <ul></ul>
+                                </div>
+                                <form action="/#wpcf7-f13-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                                    <div style="display: none;">
+                                        <input type="hidden" name="_wpcf7"                  value="13"           />
+                                        <input type="hidden" name="_wpcf7_version"          value="5.4"          />
+                                        <input type="hidden" name="_wpcf7_locale"           value="ja"           />
+                                        <input type="hidden" name="_wpcf7_unit_tag"         value="wpcf7-f13-o1" />
+                                        <input type="hidden" name="_wpcf7_container_post"   value="0"            />
+                                        <input type="hidden" name="_wpcf7_posted_data_hash" value=""             />
+                                    </div>
+                                    <div class="box cf">
+                                        <p><span class="wpcf7-form-control-wrap company"><input type="text" name="company" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="会社名" /></span></p>
+                                        <p><span class="wpcf7-form-control-wrap department"><input type="text" name="department" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="所属" /></span></p>
+                                        <p><strong>必須</strong><span class="wpcf7-form-control-wrap your_name"><input type="text" name="your_name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="お名前" /></span></p>
+                                        <p><strong>必須</strong><span class="wpcf7-form-control-wrap your_furi"><input type="text" name="your_furi" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="フリガナ" /></span></p>
+                                        <p><strong>必須</strong><span class="wpcf7-form-control-wrap email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="メールアドレス" /></span></p>
+                                        <p><strong>必須</strong><span class="wpcf7-form-control-wrap tel"><input type="tel" name="tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="電話番号" /></span></p>
+                                        <p class="max"><strong>必須</strong><span class="wpcf7-form-control-wrap message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="お問い合わせ内容ご入力ください。"></textarea></span></p>
+                                    </div>
+
+                                    <p class="accept"><span class="wpcf7-form-control-wrap checkbox-708"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first last"><label><input type="checkbox" name="checkbox-708[]" value="上記の内容で送信します。" /><span class="wpcf7-list-item-label">上記の内容で送信します。</span></label></span></span></span></p>
+
+                                    <div class="more submit-btn">
+                                        <a class="hover-btn"><input type="submit" value="送　信" class="wpcf7-form-control wpcf7-submit" id="formbtn" /></a>
+                                    </div>
+                                    <div class="wpcf7-response-output" aria-hidden="true"></div><br />
+                                    <div class="inv-recaptcha-holder"></div>
+                                </form>
+                            </div><!-- class="wpcf7" id="wpcf7-f13-o1" -->
+                        </div><!-- class="form col" -->
+                    </div><!-- class="wrapper scroll-area" -->
+                </div><!-- id="contact" class="swiper-slide container flex-c-c" data-hash="slide5" -->
+            </div><!-- class="swiper-wrapper" -->
+
+
+            <!--
+                画面下のボタン
+                押したらスライドが流れる
+            -->
+            <!-- スクロールボタン -->
+            <div class="scroll-btn scroll-line">
+                <div class="swiper-button-next scroll"></div>
+            </div>
+
+
+
+            <!--
+                画面左のタイトルとかナビゲーションとか
+            -->
+            <!-- 左ナビゲーション -->
+            <div class="swiper-my-pagination nav-left"></div>
+            <!-- 左タイトル表示 -->
+            <div class="swiper-my-pagination page-ttl"></div>
+            <!-- ドットナビゲーションボタン -->
+            <div class="swiper-my-pagination nav-btn scroll-line pc-hide"></div>
+
+        </div><!-- class="swiper-container main" -->
+
+
+
+
+        <script type='text/javascript' src='https://c0.wp.com/c/5.7.1/wp-includes/js/dist/vendor/wp-polyfill.min.js' id='wp-polyfill-js'></script>
+        <script type='text/javascript' id='wp-polyfill-js-after'>
+            ( 'fetch' in window ) || document.write( '<script src="https://lid.co.jp/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://lid.co.jp/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://lid.co.jp/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://lid.co.jp/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://lid.co.jp/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://lid.co.jp/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://lid.co.jp/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
+        </script>
+        <script type='text/javascript' src='https://c0.wp.com/c/5.7.1/wp-includes/js/dist/hooks.min.js' id='wp-hooks-js'></script>
+        <script type='text/javascript' src='https://c0.wp.com/c/5.7.1/wp-includes/js/dist/i18n.min.js' id='wp-i18n-js'></script>
+        <script type='text/javascript' id='wp-i18n-js-after'>
+            wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+        </script>
+
+        <script type='text/javascript' src='https://c0.wp.com/c/5.7.1/wp-includes/js/dist/vendor/lodash.min.js' id='lodash-js'></script>
+        <script type='text/javascript' id='lodash-js-after'>
+            window.lodash = _.noConflict();
+        </script>
+
+        <script type='text/javascript' src='https://c0.wp.com/c/5.7.1/wp-includes/js/dist/url.min.js' id='wp-url-js'></script>
+
+        <script type='text/javascript' id='wp-api-fetch-js-translations'>
+            ( function( domain, translations ) {
+                var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+                localeData[""].domain = domain;
+                wp.i18n.setLocaleData( localeData, domain );
+            } )( "default", {"translation-revision-date":"2021-04-15 03:43:09+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"ja_JP"},"You are probably offline.":["\u73fe\u5728\u30aa\u30d5\u30e9\u30a4\u30f3\u306e\u3088\u3046\u3067\u3059\u3002"],"Media upload failed. If this is a photo or a large image, please scale it down and try again.":["\u30e1\u30c7\u30a3\u30a2\u306e\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9\u306b\u5931\u6557\u3057\u307e\u3057\u305f\u3002 \u5199\u771f\u307e\u305f\u306f\u5927\u304d\u306a\u753b\u50cf\u306e\u5834\u5408\u306f\u3001\u7e2e\u5c0f\u3057\u3066\u3082\u3046\u4e00\u5ea6\u304a\u8a66\u3057\u304f\u3060\u3055\u3044\u3002"],"The response is not a valid JSON response.":["\u8fd4\u7b54\u304c\u6b63\u3057\u3044 JSON \u30ec\u30b9\u30dd\u30f3\u30b9\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002"],"An unknown error occurred.":["\u4e0d\u660e\u306a\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002"]}},"comment":{"reference":"wp-includes\/js\/dist\/api-fetch.js"}} );
+        </script>
+        <script type='text/javascript' src='https://c0.wp.com/c/5.7.1/wp-includes/js/dist/api-fetch.min.js' id='wp-api-fetch-js'></script>
+        <script type='text/javascript' id='wp-api-fetch-js-after'>
+            wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://lid.co.jp/wp-json/" ) );
+            wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "0a4b9cc927" );
+            wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+            wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+            wp.apiFetch.nonceEndpoint = "https://lid.co.jp/wp-admin/admin-ajax.php?action=rest-nonce";
+        </script>
+        <script type='text/javascript' id='contact-form-7-js-extra'>
+            /* <![CDATA[ */
+            var wpcf7 = [];
+            /* ]]> */
+        </script>
+        <script type='text/javascript' src='https://lid.co.jp/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4' id='contact-form-7-js'></script>
+        <script type='text/javascript' id='google-invisible-recaptcha-js-before'>
+            var renderInvisibleReCaptcha = function() {
+
+                for (var i = 0; i < document.forms.length; ++i) {
+                    var form = document.forms[i];
+                    var holder = form.querySelector('.inv-recaptcha-holder');
+
+                    if (null === holder) continue;
+                    holder.innerHTML = '';
+
+                    (function(frm){
+                        var cf7SubmitElm = frm.querySelector('.wpcf7-submit');
+                        var holderId = grecaptcha.render(holder,{
+                            'sitekey': '6Ld7NYEaAAAAAGZybupQosSAbUTRBnqcwCzKrjHq', 'size': 'invisible', 'badge' : 'inline',
+                            'callback' : function (recaptchaToken) {
+                                if((null !== cf7SubmitElm) && (typeof jQuery != 'undefined')){jQuery(frm).submit();grecaptcha.reset(holderId);return;}
+                                HTMLFormElement.prototype.submit.call(frm);
+                            },
+                            'expired-callback' : function(){grecaptcha.reset(holderId);}
+                        });
+
+                        if(null !== cf7SubmitElm && (typeof jQuery != 'undefined') ){
+                            jQuery(cf7SubmitElm).off('click').on('click', function(clickEvt){
+                                clickEvt.preventDefault();
+                                grecaptcha.execute(holderId);
+                            });
+                        }
+                        else
+                        {
+                            frm.onsubmit = function (evt){evt.preventDefault();grecaptcha.execute(holderId);};
+                        }
+                    })(form);
+                }
+            };
+        </script>
+
+        <script type='text/javascript' async defer src='https://www.google.com/recaptcha/api.js?onload=renderInvisibleReCaptcha&#038;render=explicit&#038;hl=ja' id='google-invisible-recaptcha-js'></script>
+        <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js?ver=1.19.1' id='cursor-js'></script>
+        <script type='text/javascript' src='https://lid.co.jp/wp-content/themes/lid/js/jquery.mCustomScrollbar.min.js?ver=3.1.5' id='scrollbar-js'></script>
+        <script type='text/javascript' src='https://c0.wp.com/c/5.7.1/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+
+        <!-- アクセス解析用 いらない
+        <script>
+            _stq = window._stq || [];
+            _stq.push([ 'view', {v:'ext',j:'1:9.5',blog:'190700837',post:'8',tz:'9',srv:'lid.co.jp'} ]);
+            _stq.push([ 'clickTrackerInit', '190700837', '8' ]);
+        </script>
+        -->
+
+
+        <footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+            <div class="footer-nav">
+                <p ><a href="https://lid.co.jp/recruit/">RECRUIT</a></p>
+                <p ><a href="https://lid.co.jp/privacypolicy/">PRIVACY POLICY</a></p>
+            </div>
+            <p class="copy">Copyright © lid Inc. All Rights Reserved.</p>
+        </footer>
+
+
+
+
+
+
+
+
+        <script src="https://lid.co.jp/wp-content/themes/lid/js/swiper.min.js"></script>
+        <script>
+            var mySwiper;
+            $('.cover-menu p').on('click',function(){
+                var result = $(this).data('id');
+                mySwiper.slideTo(result);
+            });
+            mySwiper = new Swiper('.swiper-container', {
+                loop                : false,
+                speed               : 800,
+                threshold           : 50,
+                noSwiping           : true,
+                noSwipingClass      : 'no-swipe',
+                slidesPerView       : 1,
+                spaceBetween        : 0,
+                centeredSlides      : true,
+                hashNavigation      : true,
+                touchReleaseOnEdges : true,
+                effect              : 'coverflow', coverflowEffect: {
+                                        rotate       : 50,
+                                        stretch      : 0,
+                                        depth        : 100,
+                                        modifier     : 1,
+                                        slideShadows : false,
+                                      },
+                grabCursor          : false,
+                noSwipingSelector   : 'input',
+                pagination          : {
+                                        el              : '.swiper-my-pagination',
+                                        type            : 'bullets',
+                                        clickable       : true,
+                                        dynamicBullets  : false,
+                                        renderBullet    : function (index, className) {
+                                                            return '<p class="' + className + '">' + '</p>';
+                                                          }
+                                       },
+                mousewheel          : {
+                                        invert: false,
+                                      },
+                navigation          : {
+                                        nextEl: '.swiper-button-next',
+                                        prevEl: '.swiper-button-prev',
+                                      },
+                on                  : {
+                                        slideChange     : function () {
+                                                            if ( $(".scroll").hasClass('swiper-button-disabled') ){
+                                                                $(".scroll-btn").addClass('last');
+                                                            }
+                                                            else{
+                                                                $(".scroll-btn").removeClass('last');
+                                                            }
+                                                          },
+                                      }
+            }) // mySwiper定義終わり
+        </script>
+    </body>
+</html>
