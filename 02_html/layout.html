@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>02_HTMLの構造</title>
+
+
+    <!-- ここにいろいろライブラリの読み込み書く -->
+
+
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <!-- 読み込み終わったら非表示になる -->
+    <div id="loading" class="flex-c-c flex-d">
+        ここにローディングアニメーションの部品が入る
+    </div>
+
+    <!-- カーソル設定 -->
+    <div class="cursor"></div>
+    <div class="follower"></div>
+
+
+    <!-- 背景 -->
+    <div id="particles-js"></div>
+    ここに背景用のJSファイルの読み込みが入る
+
+
+    <!-- 右上メニューボタン -->
+    <div class="menu">
+        hogehoge
+    </div>
+
+    <!-- モーダルナビ -->
+    <!-- 右上のMENU押したら出てくるやつ -->
+    <div class="body-cover"></div>
+    <div class="cover-menu">
+        hogehoge
+    </div>
+
+
+
+
+    <!--
+        こっからは個別のコンテンツ
+        スライドするごとにトランジションして
+        それぞれのコンテンツを表示する
+    -->
+    <div class="swiper-container main">
+        <div class="swiper-wrapper">
+            <!-- TOP -->
+            <div id="top" class="swiper-slide" data-hash="slide1">
+                hogehoge
+            </div>
+            <!-- ABOUT -->
+            <div id="about" class="swiper-slide container flex-c-c" data-hash="slide2">
+                hogehoge
+            </div>
+            <!-- SERVICE -->
+            <div id="service" class="swiper-slide container flex-c-c" data-hash="slide3">
+                hogehoge
+            </div>
+            <!-- OUTLINE -->
+            <div id="outline" class="swiper-slide container flex-c-c" data-hash="slide4">
+                hogehoge
+            </div>
+            <!-- CONTACT -->
+            <div id="contact" class="swiper-slide container flex-c-c" data-hash="slide5">
+                hogehoge
+            </div>
+        </div><!-- class="swiper-wrapper" -->
+    </div><!-- class="swiper-container main" -->
+
+
+        <!--
+            画面下のボタン
+            押したらスライドが流れる
+        -->
+        <!-- スクロールボタン -->
+        <div class="scroll-btn scroll-line">
+            <div class="swiper-button-next scroll"></div>
+        </div>
+
+
+
+        <!--
+            画面左のタイトルとかナビゲーションとか
+        -->
+        <!-- 左ナビゲーション -->
+        <div class="swiper-my-pagination nav-left"></div>
+        <!-- 左タイトル表示 -->
+        <div class="swiper-my-pagination page-ttl"></div>
+        <!-- ドットナビゲーションボタン -->
+        <div class="swiper-my-pagination nav-btn scroll-line pc-hide"></div>
+
+    </div><!-- class="swiper-container main" -->
+
+</body>
+</html>
