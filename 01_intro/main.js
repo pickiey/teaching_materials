@@ -174,10 +174,29 @@ console.log('hoge')
 //  const target = document.getElementById("box")
 //  console.log(target)
 //
+//
+//  // jQueryを使うと楽に書ける
+//  const target2 = $('#box')[0]
+//  console.log(target2)
+//
+//  /*
+//      getElementById("hoge") は
+//      ネイティブな DOM オブジェクトを返すが、
+//
+//      $("#hoge") はjquery のオブジェクトを返す
+//
+//      getElementById() はネイティブであり、
+//      jquery の id クエリ―より高速
+//
+//      楽に書ける ≠ 処理が早い
+//  */
+//
 //  target.onclick = () => {
 //      target.innerHTML = 'ダァーーー!!!!!!'
 //      target.style.color="white";
 //      target.style.backgroundColor="blue";
 //  }
+//
+//
 
 

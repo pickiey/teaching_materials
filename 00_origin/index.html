@@ -13,7 +13,16 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
-        <link rel="stylesheet" href="https://lid.co.jp/wp-content/themes/lid/js/swiper.min.css">
+
+
+
+        <!--
+            Swiper用
+        -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
 
         <title>lid Inc.</title>
 
@@ -28,9 +37,6 @@
         <link rel='stylesheet' id='base-css'                                 href='https://lid.co.jp/wp-content/themes/lid/base.css?ver=5.7.1'                                                 type='text/css' media='all' />
         <link rel='stylesheet' id='style-css'                                href='https://lid.co.jp/wp-content/themes/lid/style.css?ver=5.7.1'                                                type='text/css' media='all' />
 
-        <!-- アクセス解析用のツール いらない
-        <link rel='stylesheet' id='jetpack_css-css'                          href='https://c0.wp.com/p/jetpack/9.5/css/jetpack.css'                                                            type='text/css' media='all' />
-        -->
 
         <script type='text/javascript' id='jquery-js'  src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=1.12.4'></script>
         <script type='text/javascript' id='circle-js'  src='https://lid.co.jp/wp-content/themes/lid/js/circle-anime.js?ver=1.12.4'></script>
@@ -407,14 +413,6 @@
         <script type='text/javascript' src='https://lid.co.jp/wp-content/themes/lid/js/jquery.mCustomScrollbar.min.js?ver=3.1.5' id='scrollbar-js'></script>
         <script type='text/javascript' src='https://c0.wp.com/c/5.7.1/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
 
-        <!-- アクセス解析用 いらない
-        <script>
-            _stq = window._stq || [];
-            _stq.push([ 'view', {v:'ext',j:'1:9.5',blog:'190700837',post:'8',tz:'9',srv:'lid.co.jp'} ]);
-            _stq.push([ 'clickTrackerInit', '190700837', '8' ]);
-        </script>
-        -->
-
 
         <footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
             <div class="footer-nav">
@@ -426,65 +424,8 @@
 
 
 
-
-
-
-
-
-        <script src="https://lid.co.jp/wp-content/themes/lid/js/swiper.min.js"></script>
-        <script>
-            var mySwiper;
-            $('.cover-menu p').on('click',function(){
-                var result = $(this).data('id');
-                mySwiper.slideTo(result);
-            });
-            mySwiper = new Swiper('.swiper-container', {
-                loop                : false,
-                speed               : 800,
-                threshold           : 50,
-                noSwiping           : true,
-                noSwipingClass      : 'no-swipe',
-                slidesPerView       : 1,
-                spaceBetween        : 0,
-                centeredSlides      : true,
-                hashNavigation      : true,
-                touchReleaseOnEdges : true,
-                effect              : 'coverflow', coverflowEffect: {
-                                        rotate       : 50,
-                                        stretch      : 0,
-                                        depth        : 100,
-                                        modifier     : 1,
-                                        slideShadows : false,
-                                      },
-                grabCursor          : false,
-                noSwipingSelector   : 'input',
-                pagination          : {
-                                        el              : '.swiper-my-pagination',
-                                        type            : 'bullets',
-                                        clickable       : true,
-                                        dynamicBullets  : false,
-                                        renderBullet    : function (index, className) {
-                                                            return '<p class="' + className + '">' + '</p>';
-                                                          }
-                                       },
-                mousewheel          : {
-                                        invert: false,
-                                      },
-                navigation          : {
-                                        nextEl: '.swiper-button-next',
-                                        prevEl: '.swiper-button-prev',
-                                      },
-                on                  : {
-                                        slideChange     : function () {
-                                                            if ( $(".scroll").hasClass('swiper-button-disabled') ){
-                                                                $(".scroll-btn").addClass('last');
-                                                            }
-                                                            else{
-                                                                $(".scroll-btn").removeClass('last');
-                                                            }
-                                                          },
-                                      }
-            }) // mySwiper定義終わり
-        </script>
+        <!-- スワイプ用 -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/myswiper.js"></script>
     </body>
 </html>
