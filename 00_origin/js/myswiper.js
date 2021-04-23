@@ -60,7 +60,7 @@ const mySwiper = new Swiper('.swiper-container', {
 
 
 const target = document.querySelectorAll('.cover-menu p')
-console.log(target)
+//console.log(target)
 
 target.onclick = () => {
     let result = target.data('id')

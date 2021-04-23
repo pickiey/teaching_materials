@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <title>02_Loading</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
-<body>
-    <div id="loading" class="flex-c-c flex-d">
-        <div class="preloader">
-            <div class="preloader__square"></div>
-            <div class="preloader__square"></div>
-            <div class="preloader__square"></div>
-            <div class="preloader__square"></div>
+        <title>02_Loading</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="loading" class="flex-c-c flex-d">
+            <div class="preloader">
+                <div class="preloader__square"></div>
+                <div class="preloader__square"></div>
+                <div class="preloader__square"></div>
+                <div class="preloader__square"></div>
+            </div>
+            <div class="status">
+                Loading
+                <span class="status__dot">.</span>
+                <span class="status__dot">.</span>
+                <span class="status__dot">.</span>
+            </div>
         </div>
-        <div class="status">
-            Loading
-            <span class="status__dot">.</span>
-            <span class="status__dot">.</span>
-            <span class="status__dot">.</span>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
