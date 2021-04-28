@@ -2,7 +2,7 @@ html,body{
     overflow-x: hidden;
 }
 
-#img_flow{
+#img_flow > img{
     position:absolute;
 }
 
