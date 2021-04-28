@@ -23,8 +23,8 @@ const mySwiper = new Swiper('.swiper-container', {
                             type            : 'bullets',
                             clickable       : true,
                             dynamicBullets  : false,
-                            renderBullet    : function (index, className) {
-                                                return '<p class="' + className + '">' + '</p>';
+                            renderBullet    : function(_, className) {
+                                                return '<p class="' + className + '">' + '</p>'
                                               }
                            },
     mousewheel          : {
@@ -35,14 +35,16 @@ const mySwiper = new Swiper('.swiper-container', {
                             prevEl: '.swiper-button-prev',
                           },
     on                  : {
-                            slideChange     : function () {
+                            slideChange     : function() {
+                                                console.log($(".scroll"))
+                                                console.log($(".scroll-btn"))
                                                 if ( $(".scroll").hasClass('swiper-button-disabled') ){
-                                                    $(".scroll-btn").addClass('last');
+                                                    $(".scroll-btn").addClass('last')
                                                 }
                                                 else{
-                                                    $(".scroll-btn").removeClass('last');
+                                                    $(".scroll-btn").removeClass('last')
                                                 }
-                                              },
+                                              }
                           }
 })
 
