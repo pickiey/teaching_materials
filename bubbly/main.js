@@ -75,9 +75,9 @@ const init = () => {
 // キャンバスの描画要素にする
 const draw = () => {
     IMG_LIST.forEach(
-        target => {
-            target.update()
-            CONTEXT.drawImage(target.object, target.x, target.y)
+        mvi => {
+            mvi.update()
+            CONTEXT.drawImage(mvi.object, mvi.x, mvi.y)
         }
     )
 }
@@ -89,11 +89,25 @@ const render = () => {
     requestAnimationFrame(render)
 }
 
-
 // ブラウザのサイズ変更したら反映
 const resetScreenSize = () => {
     win_width  = canvas.width  = window.innerWidth
     win_height = canvas.height = window.innerHeight
+
+    // 画面からはみ出てしまう場合は
+    // フチに移動させ移動方向逆にする
+    IMG_LIST.forEach(
+        mvi => {
+            if ( mvi.x + mvi.width  > win_width  ) {
+                mvi.x   = win_width  - mvi.width
+                mvi.vx *= -1
+            }
+            if ( mvi.y + mvi.height > win_height ) {
+                mvi.y   = win_height - mvi.height
+                mvi.vy *= -1
+            }
+        }
+    )
 }
 
 
@@ -102,11 +116,10 @@ const resetScreenSize = () => {
 // 3. 実行
 //
 
+// 初期化
 init()
 
-console.log(win_width)
-console.log(win_height)
-
+// 画面サイズ変更の開始
 window.onresize = () => {
     (timer > 0) && clearTimeout(timer)
     timer = setTimeout(resetScreenSize(), intervalTime)
@@ -114,3 +127,31 @@ window.onresize = () => {
 
 render()
 
+
+
+/*
+    一定時間おきに描画させたい場合の書き方
+
+
+
+// タイマー処理用のラッパー
+const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+// 最低間隔を確保したいタイプのリピート処理を行う関数
+const intervalRepeater = async (callback, interval) => {
+    while (true) {
+        await Promise.all([callback(), wait(interval)])
+    }
+}
+
+// キャンバスをクリアして描画する
+const renderSingle = () => {
+    CONTEXT.clearRect(0, 0, win_width, win_height)
+    draw()
+}
+
+// 最低でも 1ミリ秒 の間隔を挟みながら
+// render を実行
+intervalRepeater(renderSingle, 1)
+
+*/
