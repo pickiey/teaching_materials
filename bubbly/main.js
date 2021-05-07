@@ -20,7 +20,7 @@ let     win_width   = CANVAS.width  = window.innerWidth,
 const   IMG_LIST  = new Array
 
 const   PATH_LIST = [
-    "./indo.png"
+    "images/indo.png"
 ]
 
 let     timer           = 0
